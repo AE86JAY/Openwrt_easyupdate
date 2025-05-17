@@ -26,3 +26,4 @@ sed -i '/CYXluq4wUazHjmCDBCqXF/d' package/lean/default-settings/files/zzz-defaul
 git clone --depth 1 https://github.com/vernesong/OpenClash package/luci-app-openclash
 rm -rf feeds/luci/themes/luci-theme-argon    # 删除自带argon
 git clone -b master https://github.com/jerrykuku/luci-theme-argon.git feeds/luci/themes/luci-theme-argon    # 替换新版argon
+git clone https://github.com/danchexiaoyang/luci-app-syncthing.git feeds/luci/luci-app-syncthing # 添加文件自动同步插件
