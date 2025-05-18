@@ -7,7 +7,6 @@
 # https://github.com/P3TERX/Actions-OpenWrt
 # Description: Build OpenWrt using GitHub Actions
 #
-
 name: 编译ASUS_RT-AC42U固件
 
 on:
@@ -22,6 +21,10 @@ on:
         description: 'Cache wrt build'
         required: false
         default: 'true'
+  schedule:
+    - cron: 0 0 1 * *
+  watch:
+    types: [started]
 
 env:
   REPO_URL: https://github.com/coolsnowwolf/lede
