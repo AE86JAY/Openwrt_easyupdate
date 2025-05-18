@@ -28,4 +28,3 @@ rm -rf feeds/luci/themes/luci-theme-argon    # 删除自带argon
 git clone -b master https://github.com/jerrykuku/luci-theme-argon.git feeds/luci/themes/luci-theme-argon    # 替换新版argon
 git clone https://github.com/danchexiaoyang/luci-app-syncthing.git feeds/luci/luci-app-syncthing # 添加文件自动同步插件
 git clone https://github.com/AE86JAY/luci-app-easymesh.git feeds/luci/luci-app-easymesh #添加简易mesh组网插件
-git clone https://github.com/danchexiaoyang/luci-app-syncthing.git feeds/luci/luci-app-syncthing # 添加文件自动同步插件
