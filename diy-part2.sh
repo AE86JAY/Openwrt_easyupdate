@@ -27,4 +27,5 @@ git clone --depth 1 https://github.com/vernesong/OpenClash package/luci-app-open
 rm -rf feeds/luci/themes/luci-theme-argon    # 删除自带argon
 git clone -b master https://github.com/jerrykuku/luci-theme-argon.git feeds/luci/themes/luci-theme-argon    # 替换新版argon
 git clone https://github.com/danchexiaoyang/luci-app-syncthing.git feeds/luci/luci-app-syncthing # 添加文件自动同步插件
+rm -rf feeds/luci/applications/luci-app-easymesh
 git clone https://github.com/AE86JAY/luci-app-easymesh.git feeds/luci/luci-app-easymesh #添加简易mesh组网插件
