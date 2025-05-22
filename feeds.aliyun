@@ -1,0 +1,4 @@
+src-git packages https://mirrors.aliyun.com/openwrt/feeds/packages-24.10.1
+src-git luci https://mirrors.aliyun.com/openwrt/feeds/luci-24.10.1
+src-git routing https://mirrors.aliyun.com/openwrt/feeds/routing-24.10.1
+src-git telephony https://mirrors.aliyun.com/openwrt/feeds/telephony-24.10.1
