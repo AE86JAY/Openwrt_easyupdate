@@ -30,3 +30,23 @@ git clone -b master https://github.com/jerrykuku/luci-theme-argon.git feeds/luci
 # git clone https://github.com/danchexiaoyang/luci-app-syncthing.git feeds/luci/luci-app-syncthing # 添加文件自动同步插件
 rm -rf feeds/luci/applications/luci-app-easymesh
 git clone -b main https://github.com/AE86JAY/luci-app-easymesh.git feeds/luci/luci-app-easymesh #添加简易mesh组网插件
+# 创建启动脚本
+cat << "EOF" > package/base-files/files/etc/uci-defaults/99-custom-feeds
+#!/bin/sh
+
+# 替换软件源为阿里云镜像
+cat << "EOL" > /etc/opkg/distfeeds.conf
+src/gz openwrt_core https://mirrors.aliyun.com/openwrt/releases/24.10.1/targets/ipq40xx/generic/packages
+src/gz openwrt_base https://mirrors.aliyun.com/openwrt/releases/24.10.1/packages/arm_cortex-a7_neon-vfpv4/base
+src/gz openwrt_luci https://mirrors.aliyun.com/openwrt/releases/24.10.1/packages/arm_cortex-a7_neon-vfpv4/luci
+src/gz openwrt_packages https://mirrors.aliyun.com/openwrt/releases/24.10.1/packages/arm_cortex-a7_neon-vfpv4/packages
+src/gz openwrt_telephony https://mirrors.aliyun.com/openwrt/releases/24.10.1/packages/arm_cortex-a7_neon-vfpv4/telephony
+EOL
+
+# 执行完成后删除脚本
+rm -f /etc/uci-defaults/99-custom-feeds
+exit 0
+EOF
+
+# 设置脚本权限
+chmod +x package/base-files/files/etc/uci-defaults/99-custom-feeds

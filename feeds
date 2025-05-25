@@ -1,0 +1,5 @@
+src/gz openwrt_core https://mirrors.aliyun.com/openwrt/releases/24.10.1/targets/ipq40xx/generic/packages
+src/gz openwrt_base https://mirrors.aliyun.com/openwrt/releases/24.10.1/packages/arm_cortex-a7_neon-vfpv4/base
+src/gz openwrt_luci https://mirrors.aliyun.com/openwrt/releases/24.10.1/packages/arm_cortex-a7_neon-vfpv4/luci
+src/gz openwrt_packages https://mirrors.aliyun.com/openwrt/releases/24.10.1/packages/arm_cortex-a7_neon-vfpv4/packages
+src/gz openwrt_telephony https://mirrors.aliyun.com/openwrt/releases/24.10.1/packages/arm_cortex-a7_neon-vfpv4/telephony
